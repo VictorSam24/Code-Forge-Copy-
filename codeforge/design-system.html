@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap">
+  <title>CodeForge Design System</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    /* Style-guide chrome only — not part of the design system */
+    .sg-section { padding-block: var(--space-9); border-bottom: 1px solid var(--color-border); }
+    .sg-label { margin: 0 0 var(--space-6); font: var(--fw-bold) var(--fs-eyebrow)/1 var(--font-heading); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--color-primary); }
+    .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-4); }
+    .sg-swatch { border-radius: var(--radius-card); overflow: hidden; background: #fff; box-shadow: var(--shadow-sm); font-size: 13px; line-height: 1.4; }
+    .sg-swatch div { height: 72px; border-bottom: 1px solid var(--color-border); }
+    .sg-swatch p { margin: 0; padding: 10px 12px; }
+    .sg-swatch b { display: block; color: var(--color-heading); }
+    .sg-type { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-6); align-items: baseline; padding: var(--space-5) 0; border-top: 1px solid var(--color-border); }
+    .sg-type small { font-size: 13px; line-height: 1.5; }
+    .sg-row { display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: center; }
+    .sg-box { width: 120px; height: 90px; display: grid; place-items: center; background: #fff; font-size: 13px; text-align: center; }
+    .sg-space { display: flex; align-items: center; gap: var(--space-4); font-size: 13px; }
+    .sg-space span { display: block; height: 14px; background: var(--color-primary); border-radius: 3px; }
+    .ph { background: linear-gradient(135deg, #C9D6E3, #8FA5BA); }
+    .ph--warm { background: linear-gradient(135deg, #D8C6B8, #8F7D72); }
+    .ph--cool { background: linear-gradient(135deg, #B7CDE0, #5E7C99); }
+    .sg-header-demo { position: relative; height: var(--header-height); background: var(--gradient-hero); border-radius: var(--radius-card); }
+    .sg-header-demo .site-header { position: absolute; }
+    .sg-dropdown-demo { position: relative; height: 330px; }
+    .sg-dropdown-demo .dropdown { position: static; opacity: 1; visibility: visible; transform: none; }
+    .sg-dropdown-demo .dropdown .dropdown { position: absolute; top: 40px; left: calc(100% + 6px); opacity: 1; visibility: visible; transform: none; }
+    .sg-mobile-demo { position: relative; width: 340px; height: 460px; border-radius: var(--radius-card); overflow: hidden; }
+    .sg-mobile-demo .mobile-menu { position: absolute; opacity: 1; visibility: visible; }
+    .sg-note { font-size: 14px; color: var(--color-muted); margin-top: var(--space-4); }
+    @media (max-width: 767px) {
+      .sg-type { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+      .sg-dropdown-demo { height: auto; }
+      .sg-dropdown-demo .dropdown .dropdown { position: static; padding: 0 0 0 var(--space-4); box-shadow: none; }
+      .sg-mobile-demo { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+
+<header class="container" style="padding-block: var(--space-9) var(--space-6)">
+  <span class="eyebrow">Phase 2 · Design system</span>
+  <h1 class="t-section">CodeForge tokens &amp; components</h1>
+  <p class="t-lead" style="max-width:720px">Every value below comes from <code>css/tokens.css</code>, verified against codeforge.themerex.net. Components in <code>css/components.css</code> use only those tokens. Photos are neutral placeholders that keep the reference's aspect ratios.</p>
+</header>
+
+<!-- ============ COLORS ============ -->
+<section class="sg-section container">
+  <p class="sg-label">2.1 Color</p>
+  <div class="sg-swatches">
+    <div class="sg-swatch"><div style="background:var(--color-primary)"></div><p><b>Primary</b>#00ADFF</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-primary-hover)"></div><p><b>Primary hover</b>#069EE6</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-secondary)"></div><p><b>Secondary</b>#3441BE</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-secondary-hover)"></div><p><b>Secondary hover</b>#2430A2</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-accent)"></div><p><b>Accent</b>#86AE6E</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-heading)"></div><p><b>Heading / dark surface</b>#17242B</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-text)"></div><p><b>Body text</b>#929393</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-muted)"></div><p><b>Muted</b>#ACACAC</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-border)"></div><p><b>Border</b>#E5E7E8</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-background)"></div><p><b>Background</b>#FDFDFD</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-background-alt)"></div><p><b>Background alt</b>#F7FAFC</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-footer-bg)"></div><p><b>Footer</b>#0D0E0F</p></div>
+    <div class="sg-swatch"><div style="background:var(--color-footer-input-bg)"></div><p><b>Footer input</b>#1D1E21</p></div>
+    <div class="sg-swatch"><div style="background:var(--gradient-hero)"></div><p><b>Hero mesh</b>sky · ice · lilac · blush</p></div>
+    <div class="sg-swatch"><div style="background:var(--gradient-soft-a)"></div><p><b>Soft A</b>Solutions section</p></div>
+    <div class="sg-swatch"><div style="background:var(--gradient-soft-b)"></div><p><b>Soft B</b>Blog section</p></div>
+  </div>
+</section>
+
+<!-- ============ TYPOGRAPHY ============ -->
+<section class="sg-section container">
+  <p class="sg-label">2.2 Typography — Quicksand (headings) · DM Sans (body)</p>
+  <div class="sg-type"><small>Hero · Quicksand 700<br>80 / 76px · −0.03em<br>30px mobile</small><h1 class="t-hero" style="margin:0">We will help your business</h1></div>
+  <div class="sg-type"><small>Page title · Quicksand 700<br>68px · −0.03em</small><h1 class="t-page" style="margin:0">About Agency</h1></div>
+  <div class="sg-type"><small>Section · Quicksand 700<br>57 / 57px · −0.03em<br>38 tablet · 26 mobile</small><h2 class="t-section" style="margin:0">Service packages for you</h2></div>
+  <div class="sg-type"><small>Card · Quicksand 700<br>24 / 29px</small><h4 class="t-card" style="margin:0">Process optimization</h4></div>
+  <div class="sg-type"><small>Blog title · Quicksand 700<br>26 / 31px</small><h5 style="font-size:var(--fs-blog-title);line-height:var(--lh-card);margin:0">Email marketing basics: driving conversions</h5></div>
+  <div class="sg-type"><small>Eyebrow · Quicksand 700<br>14px · 0.13em · uppercase</small><span class="eyebrow" style="margin:0">Our price table</span></div>
+  <div class="sg-type"><small>Body · DM Sans 400<br>17 / 27.9px · 0.1px</small><p style="margin:0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur qui officia deser.</p></div>
+  <div class="sg-type"><small>Navigation · Quicksand 700<br>15 / 22.5px</small><span style="font:var(--fw-bold) var(--fs-nav)/1.5 var(--font-heading);color:var(--color-heading)">Home &nbsp; Pages &nbsp; Portfolio &nbsp; Blog &nbsp; Contacts</span></div>
+  <div class="sg-type"><small>Button · Quicksand 700<br>15 / 21px</small><span style="font:var(--fw-bold) var(--fs-button)/21px var(--font-heading);color:var(--color-heading)">Discover Now</span></div>
+  <div class="sg-type"><small>Numbers · Quicksand 700<br>39–48px</small><span class="price-card__price">$174.00</span></div>
+  <div class="sg-type"><small>Meta · DM Sans 700<br>12px · uppercase</small><span class="t-meta">Digital · 22 Apr</span></div>
+</section>
+
+<!-- ============ LAYOUT ============ -->
+<section class="sg-section container">
+  <p class="sg-label">2.3 Layout, spacing, radius, shadow</p>
+  <div class="grid grid--2">
+    <div>
+      <div class="sg-space"><span style="width:4px"></span>4 · space-1</div>
+      <div class="sg-space"><span style="width:8px"></span>8 · space-2</div>
+      <div class="sg-space"><span style="width:16px"></span>16 · space-4</div>
+      <div class="sg-space"><span style="width:20px"></span>20 · space-5</div>
+      <div class="sg-space"><span style="width:30px"></span>30 · space-6 / grid gap</div>
+      <div class="sg-space"><span style="width:40px"></span>40 · space-7</div>
+      <div class="sg-space"><span style="width:60px"></span>60 · space-8 / wide gap</div>
+      <div class="sg-space"><span style="width:80px"></span>80 · space-9</div>
+      <div class="sg-space"><span style="width:120px"></span>120 · space-10 / section padding</div>
+    </div>
+    <div>
+      <p class="t-small">Container 1290px · header 117px (72 mobile) · button 55px high, 45px side padding · breakpoints 1679 / 1279 / 1023 / 767 / 479 · image ratios: blog 890:664, feature 520:642, portfolio 1920:1709 and 1495:1920.</p>
+      <div class="sg-row">
+        <div class="sg-box" style="border-radius:var(--radius-pill);box-shadow:var(--shadow-sm)">pill 30</div>
+        <div class="sg-box" style="border-radius:var(--radius-card);box-shadow:var(--shadow-xs)">card 15<br>shadow-xs</div>
+        <div class="sg-box" style="border-radius:var(--radius-media);box-shadow:var(--shadow-lg)">media 19<br>shadow-lg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPONENTS ============ -->
+<section class="sg-section container">
+  <p class="sg-label">2.4 Buttons &amp; links</p>
+  <div class="sg-row">
+    <a class="btn btn--primary" href="#">Discover Now</a>
+    <a class="btn btn--secondary" href="#">View All Articles</a>
+    <a class="btn btn--primary btn--sm" href="#">Let's Talk</a>
+    <button class="btn btn--secondary"><svg><use href="img/icons.svg#i-send"/></svg>Subscribe</button>
+    <a class="link-arrow" href="#">View More <svg><use href="img/icons.svg#i-arrow"/></svg></a>
+    <a class="link-underline" href="#">Read More</a>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Header &amp; navigation</p>
+  <div class="sg-header-demo">
+    <div class="site-header"><div class="container site-header__inner">
+      <button class="icon-btn icon-btn--filled" aria-label="Open panel"><svg><use href="img/icons.svg#i-menu"/></svg></button>
+      <a class="logo" href="#"><svg><use href="img/icons.svg#logo-mark"/></svg>CodeForge</a>
+      <div class="site-header__actions">
+        <ul class="nav">
+          <li class="is-current"><a href="#">Home</a></li><li><a href="#">Pages</a></li><li><a href="#">Portfolio</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacts</a></li>
+        </ul>
+        <button class="icon-btn" aria-label="Search"><svg><use href="img/icons.svg#i-search"/></svg></button>
+        <button class="icon-btn only-mobile" aria-label="Menu"><svg><use href="img/icons.svg#i-menu"/></svg></button>
+        <a class="btn btn--primary btn--sm hide-sm" href="#">Let's Talk</a>
+      </div>
+    </div></div>
+  </div>
+  <div class="grid grid--2" style="margin-top:var(--space-7)">
+    <div>
+      <p class="t-small">Dropdown (dark, 225px, nested flyout)</p>
+      <div class="sg-dropdown-demo">
+        <ul class="dropdown">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services <span>›</span></a>
+            <ul class="dropdown"><li><a href="#">Services – Agency</a></li><li><a href="#">Services – Personal</a></li></ul>
+          </li>
+          <li><a href="#">Our Team</a></li><li><a href="#">FAQ</a></li><li class="is-current"><a href="#">Pricing</a></li><li><a href="#">Tools</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <p class="t-small">Mobile menu (full-screen, dark)</p>
+      <div class="sg-mobile-demo">
+        <div class="mobile-menu">
+          <button class="icon-btn mobile-menu__close" aria-label="Close"><svg><use href="img/icons.svg#i-close"/></svg></button>
+          <ul class="mobile-menu__list">
+            <li><a href="#">Home</a><ul><li><a href="#">Online Marketing</a></li><li><a href="#">SEO Agency</a></li></ul></li>
+            <li><a href="#">Pages</a></li><li><a href="#">Portfolio</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-section" style="padding:0">
+  <div class="section--hero-bg">
+    <div class="hero" style="min-height:720px">
+      <div class="hero__media">
+        <div class="hero__photo ph" style="min-height:560px"></div>
+        <div class="hero__stats stats-card">
+          <p class="stats-card__title">Weekly statistics</p>
+          <div class="stats-card__bars">
+            <div class="stats-card__bar"><span style="height:35%"></span></div><div class="stats-card__bar"><span style="height:75%"></span></div><div class="stats-card__bar"><span style="height:60%"></span></div><div class="stats-card__bar"><span style="height:40%"></span></div><div class="stats-card__bar"><span style="height:85%"></span></div><div class="stats-card__bar"><span style="height:65%"></span></div><div class="stats-card__bar"><span style="height:30%"></span></div>
+          </div>
+          <div class="stats-card__metrics">
+            <div class="stat"><span class="stat__label">Conversion</span><span class="stat__value">90% <span class="badge">120%</span></span></div>
+            <div class="stat"><span class="stat__label">Clicks</span><span class="stat__value">1 562 <span class="badge">120%</span></span></div>
+            <div class="stat"><span class="stat__label">Purchases</span><span class="stat__value">286 <span class="badge">100%</span></span></div>
+          </div>
+          <div class="stats-card__days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+        </div>
+      </div>
+      <div class="hero__content">
+        <h1 class="t-hero">We will help your business</h1>
+        <p class="t-lead">Consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua quis nostrud exerc.</p>
+        <form class="subscribe" onsubmit="return false"><input class="input" type="email" placeholder="Enter Your Email Address" aria-label="Email"><button class="btn btn--secondary"><svg><use href="img/icons.svg#i-send"/></svg>Subscribe</button></form>
+        <label class="checkbox"><input type="checkbox"> I agree to the <a href="#">Privacy Policy</a>.</label>
+        <ul class="socials">
+          <li><a href="#" aria-label="Facebook"><svg><use href="img/icons.svg#i-fb"/></svg></a></li><li><a href="#" aria-label="X"><svg><use href="img/icons.svg#i-x"/></svg></a></li><li><a href="#" aria-label="Dribbble"><svg><use href="img/icons.svg#i-dr"/></svg></a></li><li><a href="#" aria-label="Instagram"><svg><use href="img/icons.svg#i-ig"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Section heading · feature cards</p>
+  <div class="section-head section-head--center"><span class="eyebrow">About Us</span><h2 class="t-section">We offer effective SEO and marketing services</h2></div>
+  <div class="grid grid--4" style="margin-top:var(--space-8)">
+    <div class="feature"><div class="feature__icon"><svg><use href="img/icons.svg#f-world"/></svg></div><h4 class="feature__title">Process optimization</h4><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></div>
+    <div class="feature"><div class="feature__icon"><svg><use href="img/icons.svg#f-mobile"/></svg></div><h4 class="feature__title">Corporate branding</h4><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></div>
+    <div class="feature"><div class="feature__icon"><svg><use href="img/icons.svg#f-rating"/></svg></div><h4 class="feature__title">Marketing schemes</h4><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></div>
+    <div class="feature"><div class="feature__icon"><svg><use href="img/icons.svg#f-cloud"/></svg></div><h4 class="feature__title">Strategy development</h4><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Media with overlap card · process steps</p>
+  <div class="split">
+    <div class="media-overlap"><div class="media-overlap__img ph--warm"></div><div class="media-overlap__card"><p class="media-overlap__title">We ensure your market success</p></div></div>
+    <div>
+      <span class="eyebrow">Digital Marketing</span>
+      <h2 class="t-section">We develop our digital future</h2>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur qui officia deser.</p>
+      <ol class="steps"><li><span class="steps__num">01.</span>Endless possibilities</li><li><span class="steps__num">02.</span>Creative ideas</li></ol>
+      <a class="btn btn--primary" href="#">Discover Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Logo strip</p>
+  <div class="logos"><div class="logos__item">JACOBIN</div><div class="logos__item">ninja</div><div class="logos__item">verseo</div><div class="logos__item">PBJ</div><div class="logos__item">smartsites</div><div class="logos__item">uplers</div></div>
+</section>
+
+<section class="sg-section section--soft-a" style="border:0">
+  <div class="container">
+    <p class="sg-label">Portfolio carousel (3 per view, staggered)</p>
+    <div class="carousel" style="padding-top:70px"><div class="carousel__track">
+      <div class="project"><div class="project__img ph--cool"></div></div>
+      <div class="project"><div class="project__img ph"></div></div>
+      <div class="project"><div class="project__img ph--warm"></div></div>
+    </div></div>
+    <div class="carousel-controls"><div class="dots"><button aria-current="true" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div></div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Pricing cards</p>
+  <div class="grid grid--3">
+    <div class="price-card"><h3 class="price-card__title">Silver pack</h3><div class="price-card__price">$78.00</div><div class="price-card__period">Per/Month</div><div class="price-card__details">50 Downloads</div></div>
+    <div class="price-card price-card--featured"><h3 class="price-card__title">Gold pack</h3><div class="price-card__price">$174.00</div><div class="price-card__period">Per/Month</div><div class="price-card__details">100 Downloads</div></div>
+    <div class="price-card"><h3 class="price-card__title">Platinum pack</h3><div class="price-card__price">$230.00</div><div class="price-card__period">Per/Month</div><div class="price-card__details">150 Downloads</div></div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Awards</p>
+  <div class="grid grid--2" style="row-gap:var(--space-8)">
+    <div class="award"><div class="award__head"><h3 class="award__title">Best Business Model</h3><span class="award__year">2017</span></div><p class="award__cat">CSS &amp; Animation</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></div>
+    <div class="award"><div class="award__head"><h3 class="award__title">Best Marketing Strategy</h3><span class="award__year">2018</span></div><p class="award__cat">New Strategy</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></div>
+  </div>
+</section>
+
+<section class="sg-section section--soft-b" style="border:0">
+  <div class="container">
+    <p class="sg-label">Blog cards</p>
+    <div class="grid grid--3">
+      <article class="post-card"><div class="post-card__media"><div class="post-card__img ph--cool"></div><div class="post-card__date"><strong>22</strong>Apr</div></div><div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep"></span><span class="t-meta">0 Comments</span></div><h5 class="post-card__title"><a href="#">Creating engaging online content: tips &amp; tricks</a></h5></div></article>
+      <article class="post-card"><div class="post-card__media"><div class="post-card__img ph"></div><div class="post-card__date"><strong>24</strong>Apr</div></div><div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep"></span><span class="t-meta">0 Comments</span></div><h5 class="post-card__title"><a href="#">Email marketing basics: driving conversions</a></h5></div></article>
+      <article class="post-card"><div class="post-card__media"><div class="post-card__img ph--warm"></div><div class="post-card__date"><strong>24</strong>Apr</div></div><div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep"></span><span class="t-meta">0 Comments</span></div><h5 class="post-card__title"><a href="#">Social media marketing: tips for your business</a></h5></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sg-section container">
+  <p class="sg-label">Call to action · newsletter popup</p>
+  <div class="cta-modal">
+    <div class="cta-modal__media"></div>
+    <div class="cta-modal__body">
+      <button class="icon-btn cta-modal__close" aria-label="Close"><svg><use href="img/icons.svg#i-close"/></svg></button>
+      <h2>Subscribe for the updates!</h2>
+      <input class="input input--line" type="email" placeholder="Enter Your Email Address" aria-label="Email">
+      <label class="checkbox"><input type="checkbox"> I agree to the <a href="#">Privacy Policy</a>.</label>
+      <button class="btn btn--primary">Subscribe</button>
+    </div>
+  </div>
+  <p class="sg-note">Testimonials: not present on the CodeForge home page, so no component was invented.</p>
+</section>
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div><h2 class="site-footer__title">Office</h2><p>Germany —<br>785 15h Street, Office 478<br>Berlin, De 81566</p><a class="is-underlined" href="#">info@email.com</a><span class="phone">+1 840 841 25 69</span></div>
+    <div><h2 class="site-footer__title">Links</h2><ul><li><a href="#">Home</a></li><li><a href="#">Services</a></li><li><a href="#">About Us</a></li><li><a href="#">Our Team</a></li><li><a href="#">Contacts</a></li></ul></div>
+    <div class="site-footer__socials"><h2 class="site-footer__title">Socials</h2><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Dribbble</a></li><li><a href="#">Instagram</a></li></ul></div>
+    <div><h2 class="site-footer__title">Newsletter</h2>
+      <form class="footer-subscribe" onsubmit="return false"><svg class="footer-subscribe__icon"><use href="img/icons.svg#i-mail"/></svg><input class="input" type="email" placeholder="Enter Your Email Address" aria-label="Email"><button class="icon-btn" aria-label="Subscribe"><svg><use href="img/icons.svg#i-arrow"/></svg></button></form>
+      <label class="checkbox"><input type="checkbox"> I agree to the <a href="#">Privacy Policy</a>.</label>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">ThemeREX © 2026. All Rights Reserved.</div>
+</footer>
+
+<a class="icon-btn to-top" href="#" aria-label="Back to top"><svg><use href="img/icons.svg#i-up"/></svg></a>
+</body>
+</html>

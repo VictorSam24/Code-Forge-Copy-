@@ -1,0 +1,198 @@
+/* ==========================================================================
+   CodeForge Design Tokens
+   Source of truth: https://codeforge.themerex.net/ (Home 1), inspected 2026-10-24.
+   [V] verified from computed CSS · [S] sampled from screenshots/images · [I] inferred
+   ========================================================================== */
+
+/* Fonts (DM Sans, Quicksand) are loaded with <link> tags in each page's <head>,
+   in parallel with this file instead of a render-blocking @import chain. */
+
+:root {
+  /* ---------- 2.1 Color: brand ---------- */
+  --color-primary:            #00ADFF; /* [V] text_link — main buttons, menu hover, Gold price */
+  --color-primary-hover:      #069EE6; /* [V] text_hover */
+  --color-secondary:          #3441BE; /* [V] text_link2 — Subscribe, View All Articles, overlap card */
+  --color-secondary-hover:    #2430A2; /* [V] text_hover2 */
+  --color-accent:             #86AE6E; /* [V] text_link3 — rarely used on Home 1 */
+  --color-accent-hover:       #749B5D; /* [V] text_hover3 */
+
+  /* ---------- Color: surfaces ---------- */
+  --color-background:         #FDFDFD; /* [V] body background */
+  --color-background-alt:     #F7FAFC; /* [V] scheme bg_color */
+  --color-surface:            #FDFDFD; /* [V] alter_bg_color — cards */
+  --color-surface-hover:      #FFFFFF; /* [V] alter_bg_hover */
+  --color-surface-dark:       #17242B; /* [V] extra_bg_color — dropdowns, date badge */
+
+  /* ---------- Color: text ---------- */
+  --color-heading:            #17242B; /* [V] text_dark */
+  --color-text:               #929393; /* [V] text */
+  --color-muted:              #ACACAC; /* [V] text_light — meta, dates, "Per/Month" */
+  --color-on-dark:            #FFFFFF;
+  --color-on-dark-heading:    #F9F9F9; /* [V] footer headings */
+
+  /* ---------- Color: lines ---------- */
+  --color-border:             #E5E7E8; /* [V] bd_color, input_bd_color */
+
+  /* ---------- Color: header / footer ---------- */
+  --color-header-bg:          transparent;  /* [V] over hero */
+  --color-header-bg-sticky:   #FFFFFF;      /* [V] sc_layouts_row_fixed_on */
+  --color-footer-bg:          #0D0E0F;      /* [V] */
+  --color-footer-text:        #929495;      /* [V] */
+  --color-footer-input-bg:    #1D1E21;      /* [V] */
+  --color-footer-border:      rgba(255, 255, 255, 0.08); /* [S] */
+
+  /* ---------- Color: section gradients ----------
+     The original uses three raster backgrounds (h1-bg-1/2/3.jpg, ~1920×1000).
+     Pixel samples [S]: sky #D0E9FC, ice #ECFAFE, lilac #E6DBF9, blush #FCE8F4.
+     Recreated here as soft mesh gradients — no saturated or neon tones. */
+  --color-mesh-sky:    #D0E9FC;
+  --color-mesh-ice:    #ECFAFE;
+  --color-mesh-lilac:  #E6DBF9;
+  --color-mesh-blush:  #FCE8F4;
+  --gradient-hero:
+    radial-gradient(60% 70% at 0% 0%, var(--color-mesh-sky) 0%, transparent 70%),
+    radial-gradient(45% 55% at 100% 100%, var(--color-mesh-lilac) 0%, transparent 70%),
+    radial-gradient(35% 40% at 0% 100%, var(--color-mesh-blush) 0%, transparent 70%),
+    linear-gradient(180deg, #F2FBFE 0%, #F7FAFD 100%);
+  --gradient-soft-a:
+    radial-gradient(45% 60% at 0% 0%, #F9EFF8 0%, transparent 70%),
+    radial-gradient(50% 60% at 0% 100%, #DEEEFD 0%, transparent 70%),
+    radial-gradient(40% 50% at 100% 0%, #EEECFB 0%, transparent 70%),
+    #F4F9FD;
+  --gradient-soft-b:
+    radial-gradient(45% 55% at 0% 0%, #F3EFFD 0%, transparent 70%),
+    radial-gradient(55% 60% at 100% 100%, #E0F0FF 0%, transparent 70%),
+    #FBFDFF;
+
+  /* ---------- Color: button states ---------- */
+  --btn-primary-bg:        var(--color-primary);
+  --btn-primary-bg-hover:  var(--color-primary-hover);   /* [I] */
+  --btn-primary-text:      #FFFFFF;
+  --btn-primary-shadow:    0 7px 25px rgba(0, 173, 255, 0.2);  /* [V] */
+  --btn-secondary-bg:       var(--color-secondary);
+  --btn-secondary-bg-hover: var(--color-secondary-hover); /* [I] */
+  --btn-secondary-text:     #FFFFFF;
+  --btn-secondary-shadow:   0 7px 25px rgba(52, 65, 190, 0.2); /* [V] */
+  --focus-ring:            0 0 0 3px rgba(0, 173, 255, 0.35);  /* [I] accessibility addition */
+
+  /* ---------- 2.2 Typography ---------- */
+  --font-body:    "DM Sans", sans-serif;   /* [V] */
+  --font-heading: "Quicksand", sans-serif; /* [V] */
+
+  /* Fluid sizes: clamp(mobile 375, slope, desktop 1440) — anchors verified at all three widths */
+  --fs-hero:      clamp(1.875rem, 1rem + 4.6vw, 5rem);           /* 30 → 80px [V] */
+  --fs-page:      clamp(2rem, 1.2rem + 3.6vw, 4.25rem);          /* inner-page title [I] */
+  --fs-section:   clamp(1.625rem, 0.94rem + 2.9vw, 3.5625rem);   /* 26 → 38 → 57px [V] */
+  --fs-h3:        clamp(1.5rem, 1.2rem + 1.1vw, 2.1875rem);      /* 35px overlay card [V] */
+  --fs-card:      clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);        /* 24px icon-box/price [V] */
+  --fs-blog-title:clamp(1.25rem, 1.05rem + 0.6vw, 1.625rem);     /* 26px [V] */
+  --fs-h6:        1.1875rem;                                      /* 19px awards [V] */
+  --fs-price:     clamp(2.25rem, 0.94rem + 2.9vw, 3.5625rem);    /* 39 → 57px [V] */
+  --fs-lead:      clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);     /* hero lead 19px [V] */
+  --fs-date:      2.1875rem;  /* blog date day 35px [V] */
+  --fs-body:      1.0625rem;  /* 17px [V] */
+  --fs-small:     1rem;       /* 16px descriptions [V] */
+  --fs-nav:       0.9375rem;  /* 15px [V] */
+  --fs-button:    0.9375rem;  /* 15px [V] */
+  --fs-eyebrow:   0.875rem;   /* 14px [V] */
+  --fs-meta:      0.75rem;    /* 12px [V] */
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-bold:    700;
+
+  --lh-hero:    0.95;   /* 76/80 [V] */
+  --lh-heading: 1;      /* [V] */
+  --lh-card:    1.2;    /* [V] */
+  --lh-body:    1.64;   /* [V] */
+  --lh-tight:   1.3;
+
+  --ls-heading: -0.03em;  /* [V] */
+  --ls-body:    0.1px;    /* [V] */
+  --ls-eyebrow: 0.13em;   /* 1.82px @14px [V] */
+
+  /* ---------- 2.3 Layout ---------- */
+  --container-max:     1290px; /* [V] page_width */
+  --container-gutter:  clamp(16px, 2.1vw, 30px);
+  --content-narrow:    840px;  /* [V] wp content-size */
+  --header-height:     117px;  /* [V] desktop */
+  --header-height-sm:  72px;   /* [S] mobile */
+
+  /* Spacing scale (8-based, matches Elementor gaps 10/20/30/40/60) */
+  --space-1: 0.25rem;  /* 4  */
+  --space-2: 0.5rem;   /* 8  */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.25rem;  /* 20 */
+  --space-6: 1.875rem; /* 30 */
+  --space-7: 2.5rem;   /* 40 */
+  --space-8: 3.75rem;  /* 60 */
+  --space-9: 5rem;     /* 80 */
+  --space-10: 7.5rem;  /* 120 */
+
+  --section-pad:     clamp(4rem, 2.5rem + 5.6vw, 7.5rem); /* 120px spacer rows at 1440 [V] */
+  --block-gap:       45px;  /* heading → grid → button rhythm inside sections [V] */
+  --grid-gap:        30px;  /* [V] */
+  --grid-gap-wide:   60px;  /* [V] elm_gap_wider */
+  --card-pad:        50px 20px; /* price card [V] */
+  --card-pad-blog:   46px 38px 43px; /* [V] measured at 1440 */
+  --heading-gap:     0.46em; /* heading margin-bottom [V] */
+  --paragraph-gap:   1.57em; /* [V] */
+
+  --btn-height:      55px;  /* [V] */
+  --btn-height-sm:   47px;  /* "Let's Talk" 13px pad [V] */
+  --btn-pad-x:       45px;  /* [V] */
+  --btn-pad-x-sm:    40px;  /* [V] */
+
+  --ratio-blog:      890 / 664;   /* [V] */
+  --ratio-portrait:  1495 / 1920; /* [V] portfolio portrait */
+  --ratio-landscape: 1920 / 1709; /* [V] portfolio landscape */
+  --ratio-feature:   520 / 642;   /* [V] woman photo */
+
+  --radius-pill:   30px;  /* [V] buttons, inputs */
+  --radius-card:   15px;  /* [V] cards, images */
+  --radius-media:  19px;  /* [V] large photos, overlap card */
+  --radius-circle: 50%;
+
+  --shadow-xs:    0 3px 20px rgba(23, 36, 43, 0.03); /* [V] blog card */
+  --shadow-sm:    0 3px 25px rgba(0, 0, 0, 0.05);    /* [V] inputs */
+  --shadow-icon:  0 6px 30px rgba(0, 0, 0, 0.03);    /* [V] icon circle */
+  --shadow-lg:    0 23px 90px rgba(0, 0, 0, 0.05);   /* [V] price card */
+  --shadow-menu:  1px 1px 2px rgba(0, 0, 0, 0.2);    /* [V] dropdown */
+
+  --ease:          ease;
+  --duration:      0.3s;  /* [V] */
+
+  /* Breakpoints (reference only; CSS vars can't be used in @media)
+     xl 1679 · lg 1279 · md 1023 · sm 767 · xs 479  [V] */
+}
+
+/* ---------- Responsive token overrides — values measured on the reference at 768 and 375px ---------- */
+@media (max-width: 1023px) {
+  :root {
+    --container-gutter: 30px;  /* [V] content 30–723 at 768 */
+    --header-height:    101px; /* [V] */
+    --section-pad:      80px;  /* [V] spacer rows */
+    --block-gap:        30px;  /* [V] */
+    --fs-hero:          2.375rem; /* ~38px [V] */
+    --lh-heading:       1.1;   /* 2-line 38px title = 84px [V] */
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --container-gutter: 20px;  /* [V] content 20–355 at 375 */
+    --header-height:    61px;  /* [V] */
+    --header-height-sm: 61px;
+    --section-pad:      54px;  /* [V] */
+    --block-gap:        20px;  /* [V] */
+    --fs-hero:          1.875rem; /* 30px [V] */
+    --fs-button:        0.875rem; /* 14px [V] */
+    --btn-height:       49px;  /* [V] 14px 37px padding */
+    --btn-pad-x:        37px;  /* [V] */
+    --fs-body:          1rem;  /* 16px [V] */
+    --lh-body:          1.52;  /* [V] */
+    --lh-hero:          1.13;  /* [V] */
+    --lh-heading:       1.15;  /* 26/30px [V] */
+    --ls-heading:       normal; /* [V] no negative tracking on mobile */
+  }
+}

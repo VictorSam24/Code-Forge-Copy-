@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "codeforge-d",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "http-server@14.1.1", "D:/codeforge-recreation/codeforge", "-p", "5176", "-c-1"],
+      "port": 5176
+    }
+  ]
+}
