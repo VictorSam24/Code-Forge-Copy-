@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Inner solution page composition (Industrial IoT)
+   ========================================================================== */
+
+/* ---------- Page hero ---------- */
+.page-hero { padding-block: clamp(40px, 6vw, 88px) var(--section-pad); }
+.page-hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--grid-gap-wide); align-items: center; }
+.page-hero .t-page { margin-bottom: var(--space-5); }
+.page-hero .t-lead { max-width: 540px; margin-bottom: var(--space-6); }
+
+/* ---------- What we do ---------- */
+.page-intro__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--grid-gap-wide); align-items: start; }
+.page-intro__grid .t-section { margin-bottom: 0; }
+.page-intro__body p:first-child { font-size: var(--fs-lead); color: var(--color-heading); }
+
+/* ---------- Coverage cards ---------- */
+.page-coverage .card { height: 100%; }
+.page-coverage .card::before {
+  content: ""; display: block; width: 40px; height: 4px; margin-bottom: var(--space-5);
+  border-radius: var(--radius-pill); background: var(--color-primary);
+}
+
+/* ---------- Outcomes + industries side by side ---------- */
+.page-outcomes__grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--grid-gap-wide); align-items: start; }
+.page-outcomes__grid .section-head { margin-bottom: var(--space-6); }
+.page-deploy {
+  padding: var(--card-pad); border-radius: var(--radius-card);
+  background: var(--color-surface); border: 1px solid var(--color-border);
+}
+.page-deploy .section-head { margin-bottom: var(--space-5); }
+.page-deploy .chips { flex-direction: column; align-items: flex-start; }
+
+/* ---------- CTA ---------- */
+.page-cta { padding-top: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1023px) {
+  .page-hero__grid, .page-intro__grid, .page-outcomes__grid { grid-template-columns: minmax(0, 1fr); }
+  .page-intro__grid { gap: var(--space-5); }
+}

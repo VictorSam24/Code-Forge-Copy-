@@ -1,198 +1,138 @@
 /* ==========================================================================
-   CodeForge Design Tokens
-   Source of truth: https://codeforge.themerex.net/ (Home 1), inspected 2026-10-24.
-   [V] verified from computed CSS · [S] sampled from screenshots/images · [I] inferred
+   Apar Innosys Design Tokens
+   Direction: calm, light and clear. The brief asks to avoid the usual dark,
+   negative surveillance look, so surfaces stay light and the accent green
+   echoes the "LIVE" status in the hero image.
    ========================================================================== */
 
-/* Fonts (DM Sans, Quicksand) are loaded with <link> tags in each page's <head>,
+/* Fonts (Manrope, Inter) are loaded with <link> tags in each page's <head>,
    in parallel with this file instead of a render-blocking @import chain. */
 
 :root {
-  /* ---------- 2.1 Color: brand ---------- */
-  --color-primary:            #00ADFF; /* [V] text_link — main buttons, menu hover, Gold price */
-  --color-primary-hover:      #069EE6; /* [V] text_hover */
-  --color-secondary:          #3441BE; /* [V] text_link2 — Subscribe, View All Articles, overlap card */
-  --color-secondary-hover:    #2430A2; /* [V] text_hover2 */
-  --color-accent:             #86AE6E; /* [V] text_link3 — rarely used on Home 1 */
-  --color-accent-hover:       #749B5D; /* [V] text_hover3 */
+  /* ---------- Color: brand ---------- */
+  --color-primary:            #0B63CE; /* buttons, links — 5.7:1 on white */
+  --color-primary-hover:      #0950A8;
+  --color-accent:             #17A34A; /* "live" green — dots and markers only, not text */
+  --color-accent-soft:        #E3F6EA;
 
   /* ---------- Color: surfaces ---------- */
-  --color-background:         #FDFDFD; /* [V] body background */
-  --color-background-alt:     #F7FAFC; /* [V] scheme bg_color */
-  --color-surface:            #FDFDFD; /* [V] alter_bg_color — cards */
-  --color-surface-hover:      #FFFFFF; /* [V] alter_bg_hover */
-  --color-surface-dark:       #17242B; /* [V] extra_bg_color — dropdowns, date badge */
+  --color-background:         #FFFFFF;
+  --color-background-alt:     #F4F7FA; /* alternating sections */
+  --color-surface:            #FFFFFF; /* cards */
+  --color-surface-tint:       #EAF2FC; /* numbers, chips */
+  --color-surface-dark:       #0E2236; /* CTA band, footer, mobile menu */
 
-  /* ---------- Color: text ---------- */
-  --color-heading:            #17242B; /* [V] text_dark */
-  --color-text:               #929393; /* [V] text */
-  --color-muted:              #ACACAC; /* [V] text_light — meta, dates, "Per/Month" */
+  /* ---------- Color: text (all AA on their backgrounds) ---------- */
+  --color-heading:            #0E2236;
+  --color-text:               #46566A; /* 7.5:1 on white */
+  --color-muted:              #5E6D7F; /* 5.3:1 on white, 4.9:1 on alt */
   --color-on-dark:            #FFFFFF;
-  --color-on-dark-heading:    #F9F9F9; /* [V] footer headings */
+  --color-on-dark-text:       #B9C6D4; /* 9.3:1 on surface-dark */
 
   /* ---------- Color: lines ---------- */
-  --color-border:             #E5E7E8; /* [V] bd_color, input_bd_color */
+  --color-border:             #DDE4EC;
+  --color-border-dark:        rgba(255, 255, 255, 0.12);
 
-  /* ---------- Color: header / footer ---------- */
-  --color-header-bg:          transparent;  /* [V] over hero */
-  --color-header-bg-sticky:   #FFFFFF;      /* [V] sc_layouts_row_fixed_on */
-  --color-footer-bg:          #0D0E0F;      /* [V] */
-  --color-footer-text:        #929495;      /* [V] */
-  --color-footer-input-bg:    #1D1E21;      /* [V] */
-  --color-footer-border:      rgba(255, 255, 255, 0.08); /* [S] */
+  /* ---------- Color: header ---------- */
+  --color-header-bg:          rgba(255, 255, 255, 0.92);
 
-  /* ---------- Color: section gradients ----------
-     The original uses three raster backgrounds (h1-bg-1/2/3.jpg, ~1920×1000).
-     Pixel samples [S]: sky #D0E9FC, ice #ECFAFE, lilac #E6DBF9, blush #FCE8F4.
-     Recreated here as soft mesh gradients — no saturated or neon tones. */
-  --color-mesh-sky:    #D0E9FC;
-  --color-mesh-ice:    #ECFAFE;
-  --color-mesh-lilac:  #E6DBF9;
-  --color-mesh-blush:  #FCE8F4;
+  /* ---------- Gradients ---------- */
   --gradient-hero:
-    radial-gradient(60% 70% at 0% 0%, var(--color-mesh-sky) 0%, transparent 70%),
-    radial-gradient(45% 55% at 100% 100%, var(--color-mesh-lilac) 0%, transparent 70%),
-    radial-gradient(35% 40% at 0% 100%, var(--color-mesh-blush) 0%, transparent 70%),
-    linear-gradient(180deg, #F2FBFE 0%, #F7FAFD 100%);
-  --gradient-soft-a:
-    radial-gradient(45% 60% at 0% 0%, #F9EFF8 0%, transparent 70%),
-    radial-gradient(50% 60% at 0% 100%, #DEEEFD 0%, transparent 70%),
-    radial-gradient(40% 50% at 100% 0%, #EEECFB 0%, transparent 70%),
-    #F4F9FD;
-  --gradient-soft-b:
-    radial-gradient(45% 55% at 0% 0%, #F3EFFD 0%, transparent 70%),
-    radial-gradient(55% 60% at 100% 100%, #E0F0FF 0%, transparent 70%),
-    #FBFDFF;
+    radial-gradient(55% 60% at 100% 0%, #E4EFFC 0%, transparent 70%),
+    radial-gradient(40% 50% at 0% 100%, #E9F7EE 0%, transparent 70%),
+    #F8FAFC;
+  --gradient-banner: linear-gradient(90deg, rgba(14, 34, 54, 0.82) 0%, rgba(14, 34, 54, 0.45) 55%, rgba(14, 34, 54, 0.05) 100%);
 
   /* ---------- Color: button states ---------- */
   --btn-primary-bg:        var(--color-primary);
-  --btn-primary-bg-hover:  var(--color-primary-hover);   /* [I] */
+  --btn-primary-bg-hover:  var(--color-primary-hover);
   --btn-primary-text:      #FFFFFF;
-  --btn-primary-shadow:    0 7px 25px rgba(0, 173, 255, 0.2);  /* [V] */
-  --btn-secondary-bg:       var(--color-secondary);
-  --btn-secondary-bg-hover: var(--color-secondary-hover); /* [I] */
-  --btn-secondary-text:     #FFFFFF;
-  --btn-secondary-shadow:   0 7px 25px rgba(52, 65, 190, 0.2); /* [V] */
-  --focus-ring:            0 0 0 3px rgba(0, 173, 255, 0.35);  /* [I] accessibility addition */
+  --btn-ghost-border:      var(--color-border);
+  --btn-ghost-text:        var(--color-heading);
+  --focus-ring:            0 0 0 3px rgba(11, 99, 206, 0.35);
 
-  /* ---------- 2.2 Typography ---------- */
-  --font-body:    "DM Sans", sans-serif;   /* [V] */
-  --font-heading: "Quicksand", sans-serif; /* [V] */
+  /* ---------- Typography ---------- */
+  --font-body:    "Inter", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
 
-  /* Fluid sizes: clamp(mobile 375, slope, desktop 1440) — anchors verified at all three widths */
-  --fs-hero:      clamp(1.875rem, 1rem + 4.6vw, 5rem);           /* 30 → 80px [V] */
-  --fs-page:      clamp(2rem, 1.2rem + 3.6vw, 4.25rem);          /* inner-page title [I] */
-  --fs-section:   clamp(1.625rem, 0.94rem + 2.9vw, 3.5625rem);   /* 26 → 38 → 57px [V] */
-  --fs-h3:        clamp(1.5rem, 1.2rem + 1.1vw, 2.1875rem);      /* 35px overlay card [V] */
-  --fs-card:      clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);        /* 24px icon-box/price [V] */
-  --fs-blog-title:clamp(1.25rem, 1.05rem + 0.6vw, 1.625rem);     /* 26px [V] */
-  --fs-h6:        1.1875rem;                                      /* 19px awards [V] */
-  --fs-price:     clamp(2.25rem, 0.94rem + 2.9vw, 3.5625rem);    /* 39 → 57px [V] */
-  --fs-lead:      clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);     /* hero lead 19px [V] */
-  --fs-date:      2.1875rem;  /* blog date day 35px [V] */
-  --fs-body:      1.0625rem;  /* 17px [V] */
-  --fs-small:     1rem;       /* 16px descriptions [V] */
-  --fs-nav:       0.9375rem;  /* 15px [V] */
-  --fs-button:    0.9375rem;  /* 15px [V] */
-  --fs-eyebrow:   0.875rem;   /* 14px [V] */
-  --fs-meta:      0.75rem;    /* 12px [V] */
+  --fs-hero:      clamp(2.5rem, 1.6rem + 3.9vw, 4.5rem);    /* 40 → 72px */
+  --fs-page:      clamp(2.25rem, 1.5rem + 3.2vw, 3.75rem);  /* 36 → 60px */
+  --fs-section:   clamp(1.75rem, 1.25rem + 2.1vw, 2.875rem);/* 28 → 46px */
+  --fs-banner:    clamp(2rem, 1.3rem + 3vw, 3.5rem);        /* 32 → 56px */
+  --fs-card:      clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem); /* 18 → 21px */
+  --fs-stat:      clamp(2rem, 1.6rem + 1.6vw, 2.75rem);
+  --fs-lead:      clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --fs-body:      1rem;
+  --fs-small:     0.9375rem;
+  --fs-nav:       0.9375rem;
+  --fs-button:    0.9375rem;
+  --fs-eyebrow:   0.8125rem;
 
   --fw-regular: 400;
   --fw-medium:  500;
+  --fw-semi:    600;
   --fw-bold:    700;
+  --fw-heavy:   800;
 
-  --lh-hero:    0.95;   /* 76/80 [V] */
-  --lh-heading: 1;      /* [V] */
-  --lh-card:    1.2;    /* [V] */
-  --lh-body:    1.64;   /* [V] */
-  --lh-tight:   1.3;
+  --lh-hero:    1.04;
+  --lh-heading: 1.12;
+  --lh-card:    1.3;
+  --lh-body:    1.65;
 
-  --ls-heading: -0.03em;  /* [V] */
-  --ls-body:    0.1px;    /* [V] */
-  --ls-eyebrow: 0.13em;   /* 1.82px @14px [V] */
+  --ls-heading: -0.025em;
+  --ls-eyebrow: 0.12em;
 
-  /* ---------- 2.3 Layout ---------- */
-  --container-max:     1290px; /* [V] page_width */
-  --container-gutter:  clamp(16px, 2.1vw, 30px);
-  --content-narrow:    840px;  /* [V] wp content-size */
-  --header-height:     117px;  /* [V] desktop */
-  --header-height-sm:  72px;   /* [S] mobile */
+  /* ---------- Layout ---------- */
+  --container-max:     1200px;
+  --container-gutter:  clamp(16px, 3vw, 32px);
+  --header-height:     76px;
+  --logo-height:       40px;
 
-  /* Spacing scale (8-based, matches Elementor gaps 10/20/30/40/60) */
   --space-1: 0.25rem;  /* 4  */
   --space-2: 0.5rem;   /* 8  */
   --space-3: 0.75rem;  /* 12 */
   --space-4: 1rem;     /* 16 */
-  --space-5: 1.25rem;  /* 20 */
-  --space-6: 1.875rem; /* 30 */
-  --space-7: 2.5rem;   /* 40 */
-  --space-8: 3.75rem;  /* 60 */
-  --space-9: 5rem;     /* 80 */
-  --space-10: 7.5rem;  /* 120 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
 
-  --section-pad:     clamp(4rem, 2.5rem + 5.6vw, 7.5rem); /* 120px spacer rows at 1440 [V] */
-  --block-gap:       45px;  /* heading → grid → button rhythm inside sections [V] */
-  --grid-gap:        30px;  /* [V] */
-  --grid-gap-wide:   60px;  /* [V] elm_gap_wider */
-  --card-pad:        50px 20px; /* price card [V] */
-  --card-pad-blog:   46px 38px 43px; /* [V] measured at 1440 */
-  --heading-gap:     0.46em; /* heading margin-bottom [V] */
-  --paragraph-gap:   1.57em; /* [V] */
+  --section-pad:     clamp(4rem, 2.5rem + 5vw, 7rem);
+  --block-gap:       clamp(2rem, 1.5rem + 2vw, 3.5rem); /* heading → grid */
+  --grid-gap:        24px;
+  --grid-gap-wide:   clamp(32px, 5vw, 72px);
+  --card-pad:        clamp(24px, 2.2vw, 32px);
+  --paragraph-gap:   1em;
 
-  --btn-height:      55px;  /* [V] */
-  --btn-height-sm:   47px;  /* "Let's Talk" 13px pad [V] */
-  --btn-pad-x:       45px;  /* [V] */
-  --btn-pad-x-sm:    40px;  /* [V] */
+  --btn-height:      52px;
+  --btn-height-sm:   44px;
+  --btn-pad-x:       28px;
+  --btn-pad-x-sm:    20px;
 
-  --ratio-blog:      890 / 664;   /* [V] */
-  --ratio-portrait:  1495 / 1920; /* [V] portfolio portrait */
-  --ratio-landscape: 1920 / 1709; /* [V] portfolio landscape */
-  --ratio-feature:   520 / 642;   /* [V] woman photo */
+  --ratio-media:     16 / 9; /* both source images are 1672×941 */
 
-  --radius-pill:   30px;  /* [V] buttons, inputs */
-  --radius-card:   15px;  /* [V] cards, images */
-  --radius-media:  19px;  /* [V] large photos, overlap card */
+  --radius-pill:   999px;
+  --radius-card:   14px;
+  --radius-media:  20px;
   --radius-circle: 50%;
 
-  --shadow-xs:    0 3px 20px rgba(23, 36, 43, 0.03); /* [V] blog card */
-  --shadow-sm:    0 3px 25px rgba(0, 0, 0, 0.05);    /* [V] inputs */
-  --shadow-icon:  0 6px 30px rgba(0, 0, 0, 0.03);    /* [V] icon circle */
-  --shadow-lg:    0 23px 90px rgba(0, 0, 0, 0.05);   /* [V] price card */
-  --shadow-menu:  1px 1px 2px rgba(0, 0, 0, 0.2);    /* [V] dropdown */
+  --shadow-sm:    0 1px 2px rgba(14, 34, 54, 0.06), 0 2px 8px rgba(14, 34, 54, 0.04);
+  --shadow-md:    0 8px 30px rgba(14, 34, 54, 0.08);
+  --shadow-lg:    0 24px 60px rgba(14, 34, 54, 0.14);
 
-  --ease:          ease;
-  --duration:      0.3s;  /* [V] */
+  --ease:          cubic-bezier(.2, .7, .2, 1);
+  --duration:      0.25s;
 
   /* Breakpoints (reference only; CSS vars can't be used in @media)
-     xl 1679 · lg 1279 · md 1023 · sm 767 · xs 479  [V] */
+     lg 1023 · md 767 · sm 479 */
 }
 
-/* ---------- Responsive token overrides — values measured on the reference at 768 and 375px ---------- */
-@media (max-width: 1023px) {
-  :root {
-    --container-gutter: 30px;  /* [V] content 30–723 at 768 */
-    --header-height:    101px; /* [V] */
-    --section-pad:      80px;  /* [V] spacer rows */
-    --block-gap:        30px;  /* [V] */
-    --fs-hero:          2.375rem; /* ~38px [V] */
-    --lh-heading:       1.1;   /* 2-line 38px title = 84px [V] */
-  }
-}
 @media (max-width: 767px) {
   :root {
-    --container-gutter: 20px;  /* [V] content 20–355 at 375 */
-    --header-height:    61px;  /* [V] */
-    --header-height-sm: 61px;
-    --section-pad:      54px;  /* [V] */
-    --block-gap:        20px;  /* [V] */
-    --fs-hero:          1.875rem; /* 30px [V] */
-    --fs-button:        0.875rem; /* 14px [V] */
-    --btn-height:       49px;  /* [V] 14px 37px padding */
-    --btn-pad-x:        37px;  /* [V] */
-    --fs-body:          1rem;  /* 16px [V] */
-    --lh-body:          1.52;  /* [V] */
-    --lh-hero:          1.13;  /* [V] */
-    --lh-heading:       1.15;  /* 26/30px [V] */
-    --ls-heading:       normal; /* [V] no negative tracking on mobile */
+    --header-height:  64px;
+    --logo-height:    34px;
+    --btn-height:     48px;
+    --ls-heading:     -0.015em;
   }
 }

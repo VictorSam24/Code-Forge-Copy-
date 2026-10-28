@@ -3,360 +3,256 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CodeForge – IT Company</title>
-  <meta name="description" content="CodeForge — SEO, digital marketing and IT services.">
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <title>Apar Innosys — Know Everything. Miss Nothing.</title>
+  <meta name="description" content="Apar Innosys connects cameras, sensors, and systems into one view — so your teams see what's happening, the moment it happens.">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap">
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=800&h=1100"
-        imagesrcset="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=480&h=660 480w, https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=800&h=1100 800w, https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=1120&h=1540 1120w"
-        imagesizes="(max-width: 767px) 100vw, 560px">
-  <link rel="stylesheet" href="css/tokens.css?v=3">
-  <link rel="stylesheet" href="css/components.css?v=3">
-  <link rel="stylesheet" href="css/home.css?v=3">
-  <script src="js/main.js?v=3" defer></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="preload" as="image" type="image/webp" href="img/hero-camera-grid-1600.webp"
+        imagesrcset="img/hero-camera-grid-960.webp 960w, img/hero-camera-grid-1600.webp 1600w"
+        imagesizes="(max-width: 1023px) 100vw, 660px" fetchpriority="high">
+  <link rel="stylesheet" href="css/tokens.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/home.css?v=4">
+  <script src="js/main.js?v=4" defer></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ================= HEADER ================= -->
+<!-- ================= NAVIGATION ================= -->
 <header class="site-header" id="header">
-  <div class="site-header__inner header-wide">
-    <button class="icon-btn icon-btn--filled hide-sm" type="button" data-open="side-panel" aria-controls="side-panel" aria-expanded="false" aria-label="Open side panel"><svg aria-hidden="true"><use href="img/icons.svg#i-menu"/></svg></button>
-    <a class="logo" href="#" aria-label="CodeForge home"><svg aria-hidden="true"><use href="img/icons.svg#logo-mark"/></svg>CodeForge</a>
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html"><picture><source srcset="img/apar-logo.webp" type="image/webp"><img src="img/apar-logo.png" alt="Apar Innosys" width="414" height="120"></picture></a>
     <div class="site-header__actions">
       <nav aria-label="Main">
         <ul class="nav">
-          <li class="is-current"><a href="#" aria-current="page">Home</a>
-            <ul class="dropdown">
-              <li class="is-current"><a href="#">Online Marketing</a></li>
-              <li><a href="#">SEO Agency</a></li>
-              <li><a href="#">Creative Agency</a></li>
-              <li><a href="#">Digital Agency</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Pages</a>
-            <ul class="dropdown">
-              <li><a href="#">About <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">About – Agency</a></li><li><a href="#">About – Personal</a></li></ul></li>
-              <li><a href="#">Services <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Services – Agency</a></li><li><a href="#">Services – Personal</a></li></ul></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Tools <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Shortcodes</a></li><li><a href="#">Typography</a></li><li><a href="#">404</a></li><li><a href="#">Service Plus</a></li><li><a href="#">Newsletter Popup</a></li></ul></li>
-            </ul>
-          </li>
-          <li><a href="#">Portfolio</a>
-            <ul class="dropdown">
-              <li><a href="#">Portfolio 1</a></li><li><a href="#">Portfolio 2</a></li><li><a href="#">Portfolio 3</a></li>
-              <li><a href="#">Portfolio 4</a></li><li><a href="#">Portfolio 5</a></li><li><a href="#">Portfolio 6</a></li>
-              <li><a href="#">Single Portfolio <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Style 1</a></li><li><a href="#">Style 2</a></li><li><a href="#">Style 3</a></li><li><a href="#">Style 4</a></li><li><a href="#">Style 5</a></li></ul></li>
-            </ul>
-          </li>
-          <li><a href="#">Blog</a>
-            <ul class="dropdown">
-              <li><a href="#">Blog Styles 1 <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Blog Standard</a></li><li><a href="#">Blog List</a></li><li><a href="#">Masonry 2 Columns</a></li><li><a href="#">Masonry 3 Columns</a></li><li><a href="#">Masonry 4 Columns</a></li></ul></li>
-              <li><a href="#">Blog Styles 2 <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Blog Grid 3 Columns</a></li><li><a href="#">Blog Grid 4 Columns</a></li><li><a href="#">Blog Portfolio 3 Columns</a></li><li><a href="#">Blog Portfolio 4 Columns</a></li></ul></li>
-              <li><a href="#">Single Post <svg class="chev" aria-hidden="true"><use href="img/icons.svg#i-chev"/></svg></a>
-                <ul class="dropdown"><li><a href="#">Style 1</a></li><li><a href="#">Style 2</a></li><li><a href="#">Style 3</a></li><li><a href="#">Video Post</a></li><li><a href="#">Audio Post</a></li><li><a href="#">With Sidebar</a></li></ul></li>
-            </ul>
-          </li>
-          <li><a href="#">Contacts</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="icon-btn" type="button" data-open="search" aria-controls="search" aria-expanded="false" aria-label="Search"><svg aria-hidden="true"><use href="img/icons.svg#i-search"/></svg></button>
+      <a class="btn btn--primary btn--sm hide-md" href="#contact">Get in Touch</a>
       <button class="icon-btn only-mobile" type="button" data-open="mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true"><use href="img/icons.svg#i-menu"/></svg></button>
-      <a class="btn btn--primary btn--sm hide-sm" href="#">Let's Talk</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-<!-- ================= 1. HERO ================= -->
+<!-- ================= HERO ================= -->
 <section class="home-hero section--hero-bg" aria-labelledby="hero-title">
-  <div class="hero">
-    <div class="hero__media reveal reveal--left">
-      <img class="hero__photo"
-           src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=800&h=1100"
-           srcset="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=480&h=660 480w,
-                   https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=800&h=1100 800w,
-                   https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&crop=faces&q=75&w=1120&h=1540 1120w"
-           sizes="(max-width: 767px) 100vw, 560px"
-           width="560" height="770" alt="Team reviewing results on a laptop" fetchpriority="high" decoding="async">
-      <figure class="hero__stats stats-card">
-        <figcaption class="stats-card__title">Weekly statistics</figcaption>
-        <div class="stats-card__bars" aria-hidden="true">
-          <div class="stats-card__bar"><span style="height:35%"></span></div><div class="stats-card__bar"><span style="height:75%"></span></div><div class="stats-card__bar"><span style="height:60%"></span></div><div class="stats-card__bar"><span style="height:40%"></span></div><div class="stats-card__bar"><span style="height:85%"></span></div><div class="stats-card__bar"><span style="height:65%"></span></div><div class="stats-card__bar"><span style="height:30%"></span></div>
+  <div class="container">
+    <div class="home-hero__grid">
+      <div class="home-hero__content">
+        <p class="eyebrow eyebrow--live">Industrial IoT &amp; Surveillance — Singapore · Chennai</p>
+        <h1 class="t-hero" id="hero-title">Know Everything. Miss Nothing.</h1>
+        <p class="t-lead">Apar Innosys connects cameras, sensors, and systems into one view — so your teams see what's happening, the moment it happens.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#contact">Talk to Us</a>
+          <a class="btn btn--ghost" href="#solutions">See Our Solutions</a>
         </div>
-        <dl class="stats-card__metrics">
-          <div class="stat"><dt class="stat__label">Conversion</dt><dd class="stat__value">90% <span class="badge">120%</span></dd></div>
-          <div class="stat"><dt class="stat__label">Clicks</dt><dd class="stat__value">1 562 <span class="badge">120%</span></dd></div>
-          <div class="stat"><dt class="stat__label">Purchases</dt><dd class="stat__value">286 <span class="badge">100%</span></dd></div>
-        </dl>
-        <div class="stats-card__days" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
-      </figure>
-    </div>
-    <div class="hero__content reveal">
-      <h1 class="t-hero" id="hero-title">We will help your business</h1>
-      <p class="t-lead">Consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua quis nostrud exerc.</p>
-      <form class="subscribe-form" data-subscribe>
-        <div class="subscribe">
-          <label class="visually-hidden" for="hero-email">Email address</label>
-          <input class="input" id="hero-email" type="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" required>
-          <button class="btn btn--secondary" type="submit"><svg aria-hidden="true"><use href="img/icons.svg#i-send"/></svg>Subscribe</button>
-        </div>
-        <label class="checkbox"><input type="checkbox" name="consent" required> I agree to the <a href="#">Privacy Policy</a>.</label>
-        <p class="form-status" role="status"></p>
-      </form>
-      <ul class="socials" aria-label="Social media">
-        <li><a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="img/icons.svg#i-fb"/></svg></a></li>
-        <li><a href="#" aria-label="X"><svg aria-hidden="true"><use href="img/icons.svg#i-x"/></svg></a></li>
-        <li><a href="#" aria-label="Dribbble"><svg aria-hidden="true"><use href="img/icons.svg#i-dr"/></svg></a></li>
-        <li><a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="img/icons.svg#i-ig"/></svg></a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 2–3. ABOUT + FEATURES ================= -->
-<section class="home-about" aria-labelledby="about-title">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <p class="eyebrow">About Us</p>
-      <h2 class="t-section" id="about-title">We offer effective SEO and marketing services</h2>
-    </div>
-    <ul class="grid grid--4 home-features plain-list">
-      <li class="reveal"><a class="feature" href="#"><span class="feature__icon"><svg aria-hidden="true"><use href="img/icons.svg#f-world"/></svg></span><h3 class="feature__title">Process optimization</h3><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></a></li>
-      <li class="reveal"><a class="feature" href="#"><span class="feature__icon"><svg aria-hidden="true"><use href="img/icons.svg#f-mobile"/></svg></span><h3 class="feature__title">Corporate branding</h3><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></a></li>
-      <li class="reveal"><a class="feature" href="#"><span class="feature__icon"><svg aria-hidden="true"><use href="img/icons.svg#f-rating"/></svg></span><h3 class="feature__title">Marketing schemes</h3><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></a></li>
-      <li class="reveal"><a class="feature" href="#"><span class="feature__icon"><svg aria-hidden="true"><use href="img/icons.svg#f-cloud"/></svg></span><h3 class="feature__title">Strategy development</h3><p class="feature__text">Consectetur adipiscing elit, sed do eiusmod tempo.</p></a></li>
-    </ul>
-    <div class="home-center"><a class="btn btn--primary" href="#">More Features</a></div>
-  </div>
-</section>
-
-<!-- ================= 4. DIGITAL MARKETING ================= -->
-<section class="home-digital" aria-labelledby="digital-title">
-  <div class="container split home-digital__split">
-    <figure class="media-overlap reveal reveal--left">
-      <img class="media-overlap__img"
-           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&q=75&w=700&h=864"
-           srcset="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&q=75&w=400&h=494 400w,
-                   https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&q=75&w=700&h=864 700w,
-                   https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&q=75&w=1040&h=1284 1040w"
-           sizes="(max-width: 767px) calc(100vw - 32px), 525px"
-           width="520" height="642" alt="Marketing strategist in the office" loading="lazy" decoding="async">
-      <figcaption class="media-overlap__card"><p class="media-overlap__title">We ensure your market success</p></figcaption>
-    </figure>
-    <div class="reveal">
-      <p class="eyebrow">Digital Marketing</p>
-      <h2 class="t-section" id="digital-title">We develop our digital future</h2>
-      <p class="home-digital__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur qui officia deser.</p>
-      <ol class="steps">
-        <li><span class="steps__num" aria-hidden="true">01.</span>Endless possibilities</li>
-        <li><span class="steps__num" aria-hidden="true">02.</span>Creative ideas</li>
-      </ol>
-      <a class="btn btn--primary" href="#">Discover Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 5. CLIENT LOGOS ================= -->
-<section class="home-logos" aria-label="Our clients">
-  <ul class="container logos plain-list">
-    <li class="logos__item logo-a">KESTREL</li>
-    <li class="logos__item logo-b"><span aria-hidden="true">◆</span>nimbus</li>
-    <li class="logos__item logo-c">veloxa</li>
-    <li class="logos__item logo-d">QB</li>
-    <li class="logos__item logo-e">brightsites</li>
-    <li class="logos__item logo-f"><span aria-hidden="true">▲</span>upward</li>
-  </ul>
-</section>
-
-<!-- ================= 6. PERFECT SOLUTIONS + PORTFOLIO ================= -->
-<section class="home-solutions section--soft-a" aria-labelledby="solutions-title">
-  <div class="container">
-    <div class="home-solutions__head">
-      <div class="reveal">
-        <p class="eyebrow">Perfect Solutions</p>
-        <h2 class="t-section" id="solutions-title">We open new opportunities</h2>
       </div>
-      <div class="home-solutions__text reveal">
-        <p>Ut diam quam nulla porttitor massa id. Ac auctor augue mauris augue neque gravida in. Malesuada fames ac turpis egestas maecenas laus pharetra convallis.</p>
-        <p>Dapibus ultrices in iaculis nunc sed augue. Eu turpis egestas pretium aenean pharetra magna ac placerat in ante metus.</p>
-        <a class="link-underline" href="#">Read More</a>
+      <div class="home-hero__media">
+        <figure class="media-frame">
+          <picture>
+            <source type="image/webp" srcset="img/hero-camera-grid-960.webp 960w, img/hero-camera-grid-1600.webp 1600w" sizes="(max-width: 1023px) 100vw, 660px">
+            <img src="img/hero-camera-grid-1600.jpg" srcset="img/hero-camera-grid-960.jpg 960w, img/hero-camera-grid-1600.jpg 1600w" sizes="(max-width: 1023px) 100vw, 660px"
+                 width="1600" height="900" fetchpriority="high"
+                 alt="A monitor showing a grid of twelve live camera feeds covering a site's entrance, parking, loading dock, perimeter, lobby, warehouse, production floor, offices and server room.">
+          </picture>
+        </figure>
       </div>
     </div>
-    <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Recent projects">
-      <div class="carousel__track">
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="1 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=75&w=780&h=694" srcset="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=75&w=420&h=374 420w, https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&q=75&w=780&h=694 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="347" alt="Social media apps on a phone" loading="lazy" decoding="async"></a>
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="2 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=75&w=780&h=1002" srcset="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=75&w=420&h=540 420w, https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=75&w=780&h=1002 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="501" alt="Developers discussing a project" loading="lazy" decoding="async"></a>
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="3 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=75&w=780&h=694" srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=75&w=420&h=374 420w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=75&w=780&h=694 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="347" alt="Analytics dashboard on a laptop" loading="lazy" decoding="async"></a>
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="4 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=75&w=780&h=1002" srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=75&w=420&h=540 420w, https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=75&w=780&h=1002 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="501" alt="Team planning on a whiteboard" loading="lazy" decoding="async"></a>
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="5 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&q=75&w=780&h=694" srcset="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&q=75&w=420&h=374 420w, https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&q=75&w=780&h=694 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="347" alt="Smartphone on a desk" loading="lazy" decoding="async"></a>
-        <a class="project" href="#" role="group" aria-roledescription="slide" aria-label="6 of 6"><img class="project__img" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=75&w=780&h=1002" srcset="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=75&w=420&h=540 420w, https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=75&w=780&h=1002 780w" sizes="(max-width: 767px) 85vw, 390px" width="390" height="501" alt="Colleagues celebrating a launch" loading="lazy" decoding="async"></a>
-      </div>
-    </div>
-    <div class="carousel-controls carousel-controls--overlay">
-      <button class="carousel-toggle" type="button" data-carousel-toggle aria-label="Pause slideshow"><svg aria-hidden="true"><use href="img/icons.svg#i-pause"/></svg></button>
-    </div>
-  </div>
-</section>
 
-<!-- ================= 7. PRICING ================= -->
-<section class="home-pricing" aria-labelledby="pricing-title">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <p class="eyebrow">Our Price Table</p>
-      <h2 class="t-section" id="pricing-title">Service packages for you</h2>
-      <p class="section-head__text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim occaecat consequat ad minim.</p>
-    </div>
-    <ul class="grid grid--3 home-pricing__grid plain-list">
-      <li class="price-card reveal"><h3 class="price-card__title">Silver pack</h3><p class="price-card__price">$78.00</p><p class="price-card__period">Per/Month</p><p class="price-card__details">50 Downloads</p></li>
-      <li class="price-card price-card--featured reveal"><h3 class="price-card__title">Gold pack</h3><p class="price-card__price">$174.00</p><p class="price-card__period">Per/Month</p><p class="price-card__details">100 Downloads</p></li>
-      <li class="price-card reveal"><h3 class="price-card__title">Platinum pack</h3><p class="price-card__price">$230.00</p><p class="price-card__period">Per/Month</p><p class="price-card__details">150 Downloads</p></li>
+    <!-- ================= STATS BAR ================= -->
+    <ul class="stats home-stats" aria-label="Key figures">
+      <li><span class="stats__value">&lt;5 min</span><span class="stats__label">Average alert response time</span></li>
+      <li><span class="stats__value">24 hrs</span><span class="stats__label">Monitoring, every day</span></li>
+      <li><span class="stats__value">24/7</span><span class="stats__label">Operations coverage</span></li>
+      <li><span class="stats__value">100%</span><span class="stats__label">Uptime commitment</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ================= 8. AWARDS ================= -->
-<section class="home-awards" aria-labelledby="awards-title">
-  <div class="container home-awards__layout">
-    <div class="reveal">
-      <p class="eyebrow">Achievements</p>
-      <h2 class="t-section" id="awards-title">Our awards</h2>
-    </div>
-    <div>
-      <div class="home-awards__intro reveal">
-        <p>Dignissim sodales ut eu sem integer vitae justo eget. Phasellus vesti tristique. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Fringilla ut morbi tincidunt augue interdum.</p>
-        <a class="link-arrow" href="#">View More <svg aria-hidden="true"><use href="img/icons.svg#i-arrow"/></svg></a>
-      </div>
-      <hr class="divider">
-      <ul class="grid grid--2 home-awards__grid plain-list">
-        <li class="award reveal"><div class="award__head"><h3 class="award__title">Best Business Model</h3><span class="award__year">2017</span></div><p class="award__cat">CSS &amp; Animation</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></li>
-        <li class="award reveal"><div class="award__head"><h3 class="award__title">Best Marketing Strategy</h3><span class="award__year">2018</span></div><p class="award__cat">New Strategy</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></li>
-        <li class="award reveal"><div class="award__head"><h3 class="award__title">Best SEO Services</h3><span class="award__year">2019</span></div><p class="award__cat">3D &amp; Visual Effects</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></li>
-        <li class="award reveal"><div class="award__head"><h3 class="award__title">Best Identity Design</h3><span class="award__year">2020</span></div><p class="award__cat">CSS &amp; Animation</p><p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p></li>
-      </ul>
+<!-- ================= SOLUTIONS ================= -->
+<section class="section" id="solutions" aria-labelledby="solutions-title">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">What We Do</p>
+      <h2 class="t-section" id="solutions-title">Five Disciplines. One Operating Picture.</h2>
+    </header>
+    <ul class="plain-list grid home-solutions__grid">
+      <li class="reveal">
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3 class="t-card card__title">E-Surveillance</h3>
+          <p class="card__text">Monitoring with human verification. Our operations centre watches your sites around the clock — flagging incidents, filtering false alarms, and escalating when it counts.</p>
+          <p class="card__meta">Industries: Banking · Retail · Industrial</p>
+        </article>
+      </li>
+      <li class="reveal">
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3 class="t-card card__title">Vision AI</h3>
+          <p class="card__text">Cameras that understand what they see. We deploy video analytics for intrusion detection, crowd monitoring, object recognition, and compliance.</p>
+        </article>
+      </li>
+      <li class="reveal">
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3 class="t-card card__title"><a href="industrial-iot.html">Industrial IoT<svg aria-hidden="true"><use href="img/icons.svg#i-arrow"/></svg></a></h3>
+          <p class="card__text">Sensors and data pipelines for manufacturing and energy environments. Machine health, production throughput, environmental conditions — all visible in one place.</p>
+        </article>
+      </li>
+      <li class="reveal">
+        <article class="card">
+          <span class="card__num">04</span>
+          <h3 class="t-card card__title">Smart Energy Management</h3>
+          <p class="card__text">Monitor and control energy consumption across facilities. Reduce waste, flag anomalies, and build the data history you need to make infrastructure decisions.</p>
+        </article>
+      </li>
+      <li class="reveal">
+        <article class="card">
+          <span class="card__num">05</span>
+          <h3 class="t-card card__title">CCTV Repair &amp; Maintenance</h3>
+          <p class="card__text">Scheduled servicing, fault diagnosis, and emergency response for surveillance systems in place. We work across brands and legacy setups.</p>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= BANNER ================= -->
+<section class="section home-banner" aria-labelledby="banner-title">
+  <div class="container">
+    <div class="banner reveal">
+      <picture>
+        <source type="image/webp" srcset="img/camera-industrial-site-960.webp 960w, img/camera-industrial-site-1600.webp 1600w" sizes="(max-width: 1264px) 100vw, 1200px">
+        <img class="banner__img" src="img/camera-industrial-site-1600.jpg" srcset="img/camera-industrial-site-960.jpg 960w, img/camera-industrial-site-1600.jpg 1600w" sizes="(max-width: 1264px) 100vw, 1200px"
+             width="1600" height="901" loading="lazy" alt="">
+      </picture>
+      <h2 class="banner__title" id="banner-title">The Eyes Your Operations Need.</h2>
     </div>
   </div>
 </section>
 
-<!-- ================= 9. BLOG ================= -->
-<section class="home-blog section--soft-b" aria-labelledby="blog-title">
+<!-- ================= WHY APAR INNOSYS ================= -->
+<section class="section" id="about" aria-labelledby="why-title">
+  <div class="container home-why__grid">
+    <header class="home-why__intro reveal">
+      <p class="eyebrow">Our Difference</p>
+      <h2 class="t-section" id="why-title">We Operate What We Deploy.</h2>
+      <p class="t-lead">Our E-Surveillance operations centre runs 24/7. We don't hand you a dashboard and step back — we watch, verify, and respond alongside your team.</p>
+    </header>
+    <ol class="num-list">
+      <li class="reveal">
+        <span class="num-list__num">01</span>
+        <div><h3 class="num-list__title">Operations Centre, Not Just Software</h3>
+          <p>We maintain a monitoring facility with people in it. Operators. Decisions. Not alerts sent into a void with no one behind them.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="num-list__num">02</span>
+        <div><h3 class="num-list__title">Built for Environments with Compliance Requirements</h3>
+          <p>Our deployments meet RBI guidelines for banking surveillance and safety standards for manufacturing. We know the requirements before the project starts.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="num-list__num">03</span>
+        <div><h3 class="num-list__title">Integration across Hardware</h3>
+          <p>We work across camera brands, PLC systems, SCADA platforms, and IP networks. If it generates data, we can connect it.</p></div>
+      </li>
+      <li class="reveal">
+        <span class="num-list__num">04</span>
+        <div><h3 class="num-list__title">One Team from Spec to Support</h3>
+          <p>The team that designs the solution installs it, monitors it, and maintains it. No handoffs between contractors.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CLIENT LOGOS ================= -->
+<!-- Client logos to be provided: replace each empty <li> with an <img>. -->
+<section class="section section--alt home-clients" id="clients" aria-labelledby="clients-title">
   <div class="container">
-    <div class="section-head section-head--center reveal">
-      <p class="eyebrow">Our Blog</p>
-      <h2 class="t-section" id="blog-title">Latest articles</h2>
+    <header class="section-head section-head--center">
+      <h2 class="eyebrow" id="clients-title">Trusted By</h2>
+    </header>
+    <ul class="logos" aria-hidden="true">
+      <li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+    <p class="home-clients__sectors">Banking · Manufacturing · Energy · Retail · Logistics</p>
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES ================= -->
+<section class="section" aria-labelledby="industries-title">
+  <div class="container">
+    <header class="section-head reveal">
+      <h2 class="eyebrow" id="industries-title">Sectors We Work In</h2>
+    </header>
+    <ul class="tiles">
+      <li class="reveal">Banking &amp; Financial Services</li>
+      <li class="reveal">Manufacturing</li>
+      <li class="reveal">Energy &amp; Utilities</li>
+      <li class="reveal">Retail &amp; Warehousing</li>
+      <li class="reveal">Commercial Real Estate</li>
+      <li class="reveal">Logistics &amp; Ports</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section home-cta" id="contact" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band reveal">
+      <p class="eyebrow">Let's Talk</p>
+      <h2 class="t-section" id="cta-title">You have a site to protect. We have the people and the systems to do it.</h2>
+      <p>Whether you're specifying an installation, upgrading a system, or looking for monitoring support — we're the right conversation to start.</p>
+      <div class="btn-row">
+        <a class="btn btn--light" href="#offices">Contact Us</a>
+        <a class="btn btn--ghost-light" href="#solutions">View Solutions</a>
+      </div>
     </div>
-    <div class="grid grid--3 home-blog__grid">
-      <article class="post-card reveal">
-        <div class="post-card__media"><a class="post-card__link" href="#" tabindex="-1" aria-hidden="true">
-          <img class="post-card__img" src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=75&w=890&h=664" srcset="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=75&w=420&h=313 420w, https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=75&w=890&h=664 890w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1279px) 30vw, 410px" width="410" height="306" alt="" loading="lazy" decoding="async">
-        </a>
-        <time class="post-card__date" datetime="2026-04-22"><strong>22</strong>Apr</time></div>
-        <div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep" aria-hidden="true"></span><span class="t-meta">0 Comments</span></div><h3 class="post-card__title"><a href="#">Creating engaging online content: tips &amp; tricks</a></h3></div>
-      </article>
-      <article class="post-card reveal">
-        <div class="post-card__media"><a class="post-card__link" href="#" tabindex="-1" aria-hidden="true">
-          <img class="post-card__img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=75&w=890&h=664" srcset="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=75&w=420&h=313 420w, https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=75&w=890&h=664 890w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1279px) 30vw, 410px" width="410" height="306" alt="" loading="lazy" decoding="async">
-        </a>
-        <time class="post-card__date" datetime="2026-04-24"><strong>24</strong>Apr</time></div>
-        <div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep" aria-hidden="true"></span><span class="t-meta">0 Comments</span></div><h3 class="post-card__title"><a href="#">Email marketing basics: driving conversions</a></h3></div>
-      </article>
-      <article class="post-card reveal">
-        <div class="post-card__media"><a class="post-card__link" href="#" tabindex="-1" aria-hidden="true">
-          <img class="post-card__img" src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&q=75&w=890&h=664" srcset="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&q=75&w=420&h=313 420w, https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&q=75&w=890&h=664 890w" sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 1279px) 30vw, 410px" width="410" height="306" alt="" loading="lazy" decoding="async">
-        </a>
-        <time class="post-card__date" datetime="2026-04-24"><strong>24</strong>Apr</time></div>
-        <div class="post-card__body"><div class="post-card__meta"><span class="t-meta">Digital</span><span class="sep" aria-hidden="true"></span><span class="t-meta">0 Comments</span></div><h3 class="post-card__title"><a href="#">Social media marketing: tips for your business</a></h3></div>
-      </article>
-    </div>
-    <div class="home-center"><a class="btn btn--secondary" href="#">View All Articles</a></div>
   </div>
 </section>
 
 </main>
 
-<!-- ================= 10. FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="container site-footer__grid">
-    <section aria-labelledby="ft-office"><h2 class="site-footer__title" id="ft-office">Office</h2>
-      <address><p>Germany —<br>785 15h Street, Office 478<br>Berlin, De 81566</p><a class="is-underlined" href="mailto:info@email.com">info@email.com</a><a class="phone" href="tel:+18408412569">+1 840 841 25 69</a></address></section>
-    <nav aria-labelledby="ft-links"><h2 class="site-footer__title" id="ft-links">Links</h2><ul><li><a href="#">Home</a></li><li><a href="#">Services</a></li><li><a href="#">About Us</a></li><li><a href="#">Our Team</a></li><li><a href="#">Contacts</a></li></ul></nav>
-    <nav class="site-footer__socials" aria-labelledby="ft-socials"><h2 class="site-footer__title" id="ft-socials">Socials</h2><ul><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Dribbble</a></li><li><a href="#">Instagram</a></li></ul></nav>
-    <section aria-labelledby="ft-news"><h2 class="site-footer__title" id="ft-news">Newsletter</h2>
-      <form data-subscribe>
-        <div class="footer-subscribe">
-          <svg class="footer-subscribe__icon" aria-hidden="true"><use href="img/icons.svg#i-mail"/></svg>
-          <label class="visually-hidden" for="footer-email">Email address</label>
-          <input class="input" id="footer-email" type="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" required>
-          <button class="icon-btn" type="submit" aria-label="Subscribe"><svg aria-hidden="true"><use href="img/icons.svg#i-arrow"/></svg></button>
-        </div>
-        <label class="checkbox"><input type="checkbox" name="consent" required> I agree to the <a href="#">Privacy Policy</a>.</label>
-        <p class="form-status" role="status"></p>
-      </form>
-    </section>
+  <div class="container site-footer__grid" id="offices">
+    <div class="site-footer__brand">
+      <a class="logo" href="index.html"><picture><source srcset="img/apar-logo-light.webp" type="image/webp"><img src="img/apar-logo-light.png" alt="Apar Innosys" width="414" height="120" loading="lazy"></picture></a>
+      <p class="site-footer__tagline">People · Innovation · Technology</p>
+    </div>
+    <address>
+      <h2 class="site-footer__title">Singapore</h2>
+      <a href="mailto:sundar@aparinnosys.com">sundar@aparinnosys.com</a>
+    </address>
+    <address>
+      <h2 class="site-footer__title">Chennai</h2>
+      <a href="mailto:benson.benni@aparinnosys.com">benson.benni@aparinnosys.com</a>
+    </address>
   </div>
-  <div class="container site-footer__bottom"><p>ThemeREX © 2026. All Rights Reserved.</p></div>
+  <div class="container site-footer__bottom">
+    <p>© 2024 Apar Innosys LLP. All rights reserved.</p>
+    <ul class="plain-list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul>
+  </div>
 </footer>
 
-<!-- ================= OVERLAYS (inert until opened) ================= -->
-<aside class="side-panel" id="side-panel" data-overlay role="dialog" aria-modal="true" aria-label="Side panel" inert>
-  <button class="icon-btn side-panel__close" type="button" data-close aria-label="Close panel"><svg aria-hidden="true"><use href="img/icons.svg#i-close"/></svg></button>
-  <a class="logo" href="#"><svg aria-hidden="true"><use href="img/icons.svg#logo-mark"/></svg>CodeForge</a>
-  <ul class="side-panel__socials"><li><a href="#">Facebook</a></li><li><a href="#">Twitter</a></li><li><a href="#">Dribbble</a></li><li><a href="#">Instagram</a></li></ul>
-  <address class="side-panel__contacts">
-    <a href="tel:+18408412569"><svg aria-hidden="true"><use href="img/icons.svg#i-phone"/></svg>+1 840 841 25 69</a>
-    <a href="mailto:info@email.com"><svg aria-hidden="true"><use href="img/icons.svg#i-mail"/></svg>info@email.com</a>
-  </address>
-</aside>
-
-<div class="mobile-menu" id="mobile-menu" data-overlay role="dialog" aria-modal="true" aria-label="Menu" inert>
-  <button class="icon-btn mobile-menu__close" type="button" data-close aria-label="Close menu"><svg aria-hidden="true"><use href="img/icons.svg#i-close"/></svg></button>
-  <a class="logo logo--light" href="#"><svg aria-hidden="true"><use href="img/icons.svg#logo-mark"/></svg>CodeForge</a>
-  <nav aria-label="Mobile"><ul class="mobile-menu__list" data-mobile-list></ul></nav>
-</div>
-
-<div class="search-overlay" id="search" data-overlay role="dialog" aria-modal="true" aria-label="Search" inert>
-  <button class="icon-btn search-overlay__close" type="button" data-close aria-label="Close search"><svg aria-hidden="true"><use href="img/icons.svg#i-close"/></svg></button>
-  <form class="search-overlay__form" role="search" action="#">
-    <label class="visually-hidden" for="search-input">Search</label>
-    <input id="search-input" type="search" name="s" placeholder="Type words and hit enter">
-    <button class="icon-btn" type="submit" aria-label="Submit search"><svg aria-hidden="true"><use href="img/icons.svg#i-search"/></svg></button>
-  </form>
-</div>
-
-<div class="modal" id="newsletter" data-overlay inert>
-  <div class="modal__overlay" data-close></div>
-  <div class="cta-modal" role="dialog" aria-modal="true" aria-labelledby="nl-title">
-    <div class="cta-modal__media">
-      <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=75&w=860&h=880" srcset="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=75&w=430&h=440 430w, https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&q=75&w=860&h=880 860w" sizes="(max-width: 767px) 100vw, 430px" width="430" height="440" alt="" decoding="async" fetchpriority="low">
-    </div>
-    <div class="cta-modal__body">
-      <button class="icon-btn cta-modal__close" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="img/icons.svg#i-close"/></svg></button>
-      <h2 id="nl-title">Subscribe for the updates!</h2>
-      <form data-subscribe>
-        <div class="input-line-wrap"><svg aria-hidden="true"><use href="img/icons.svg#i-mail"/></svg><label class="visually-hidden" for="nl-email">Email address</label><input class="input input--line" id="nl-email" type="email" name="email" placeholder="Enter Your Email Address" autocomplete="email" required></div>
-        <label class="checkbox"><input type="checkbox" name="consent" required> I agree to the <a href="#">Privacy Policy</a>.</label>
-        <button class="btn btn--primary" type="submit">Subscribe</button>
-        <p class="form-status" role="status"></p>
-      </form>
-    </div>
+<!-- ================= MOBILE MENU (inert until opened) ================= -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" inert>
+  <div class="mobile-menu__top">
+    <a class="logo" href="index.html"><picture><source srcset="img/apar-logo-light.webp" type="image/webp"><img src="img/apar-logo-light.png" alt="Apar Innosys" width="414" height="120" loading="lazy"></picture></a>
+    <button class="icon-btn mobile-menu__close" type="button" data-close aria-label="Close menu"><svg aria-hidden="true"><use href="img/icons.svg#i-close"/></svg></button>
   </div>
+  <nav aria-label="Mobile"><ul class="mobile-menu__list" data-mobile-list></ul></nav>
+  <a class="btn btn--light" href="#contact">Get in Touch</a>
 </div>
 
-<a class="icon-btn to-top" href="#header" aria-label="Back to top"><svg aria-hidden="true"><use href="img/icons.svg#i-up"/></svg></a>
-<div class="cursor-dot" aria-hidden="true"></div>
 </body>
 </html>

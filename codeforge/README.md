@@ -1,6 +1,8 @@
-# CodeForge homepage recreation
+# Apar Innosys website
 
-Static recreation of https://codeforge.themerex.net/ (Home 1). Plain HTML, CSS custom properties and one vanilla JS file. No framework, build step, backend or database.
+Static site for Apar Innosys. It has two pages, the homepage and Industrial IoT. Built with plain HTML, CSS custom properties and one vanilla JS file. There's no framework, build step, backend or database.
+
+All visible copy comes word for word from the client document *Apar Content - Headline Options* (DOCX/PDF). If you change copy, change it there first.
 
 ## Run
 
@@ -15,32 +17,34 @@ npx http-server@14.1.1 . -p 5173
 | Path | Role |
 |---|---|
 | `css/tokens.css` | All design tokens: color, type, spacing, radius, shadow. The only place raw values live. |
-| `css/components.css` | Reusable components (header, nav, buttons, cards, footer…). Uses tokens only. |
-| `css/home.css` | Homepage composition: section spacing and positions measured from the reference. |
-| `js/main.js` | Sticky header, overlays, dropdown state, mobile menu, carousel, forms, scroll reveal, cursor. About 8 KB, loaded with `defer`. |
+| `css/components.css` | Reusable components: header, nav, buttons, stats, cards, numbered list, steps, chips, tiles, logo slots, banner, FAQ, CTA band, footer. |
+| `css/home.css` | Homepage composition. |
+| `css/page.css` | Solution page composition (Industrial IoT). |
+| `js/main.js` | Header shadow on scroll, mobile menu (focus trap, Escape), scroll reveal. Loaded with `defer`. |
 | `img/icons.svg` | Shared SVG sprite, used via `<use href="img/icons.svg#id">`. |
-| `img/favicon.svg` | Favicon (the logo mark). |
+| `img/apar-logo.*` | Client logo with a transparent background, WebP + PNG. Used on light surfaces (header). |
+| `img/apar-logo-light.*` | The same logo with a white wordmark, for navy surfaces (footer, mobile menu). |
+| `img/apar-logo-original.jpg` | The logo as the client supplied it (white background). The other logo files are made from it. |
+| `img/favicon.png`, `img/apple-touch-icon.png` | The orange mark from the logo, cropped square. |
+| `img/hero-camera-grid-*` | Homepage hero (image 1 from the client document), WebP + JPEG at 960/1600px. |
+| `img/camera-industrial-site-*` | Industrial IoT hero and homepage banner (image 2 from the client document). |
 | `index.html` | Homepage. |
-| `design-system.html` | Style guide that shows every token and component. |
-| `DESIGN-SYSTEM.md` | Verified values, approximations, validation measurements and remaining differences. |
+| `industrial-iot.html` | Industrial IoT page. |
+| `design-system.html` | Style guide showing tokens and components. |
+| `DESIGN-SYSTEM.md` | Token and component reference, and content decisions. |
 
-## Implementation notes
+## Content decisions
 
-- **Layout**: CSS Grid for page and card layouts, Flexbox inside components. Breakpoints are 1279, 1023, 767 and 479px, the same as the reference.
-- **Images**: Unsplash photos (free license) are served with `auto=format` (WebP/AVIF), plus `srcset`/`sizes`, explicit `width`/`height` and `loading="lazy"`. The hero image is preloaded with `fetchpriority="high"`.
-- **Fonts**: Loaded with `<link>` and preconnect, not CSS `@import`.
-- **Accessibility**:
-  - Skip link, one `h1`, and headings in order.
-  - Every input has a label.
-  - Overlays are `inert` while closed. When open they trap focus, close on Escape and return focus to the button that opened them.
-  - Dropdowns expose `aria-expanded`, open on hover or focus, and close on Escape.
-  - Mobile sub-menus use real toggle buttons.
-  - The carousel has slide labels and pauses on hover or focus. It has no pagination dots, matching the reference. It does have a pause/play button (WCAG 2.2.2), which the reference doesn't.
-  - Scroll reveal only hides content when JS is running. Reduced motion is respected throughout.
-- **Forms**: Front end only. They validate and then show a status message; nothing is sent anywhere. Connect them to a mailing-list service if needed.
+- **Placeholder still to fill:** client logos are "to be provided". The homepage shows six empty dashed slots. Replace each empty `<li>` in `.logos` with an `<img>`.
+- **Homepage banner:** "The Eyes Your Operations Need." is the third headline option. It is shown as a banner with no extra copy, because the document gives no body text for it.
+- **Contact:** the content has no contact page or form. "Talk to Us" / "Get in Touch" go to the CTA section, and "Contact Us" goes to the footer office emails (`mailto:` links).
+- **Unlinked pages:** Privacy Policy and Terms link to `#` until those pages exist. The other four solutions (E-Surveillance, Vision AI, Smart Energy Management, CCTV Repair & Maintenance) have no pages yet, so only the Industrial IoT card links out.
+- **Left out on purpose:** the client's positioning answer (Q3), the "Image Idea" notes and the reviewer comments from the document.
 
-## Known deviations from the reference
+## Accessibility
 
-- Photos are replacements (the originals are licensed ThemeREX stock). Client logos are made-up wordmarks.
-- The demo-store side tabs and the chat bubble are left out.
-- Body text `#929393` on white is about 3.1:1 contrast, below WCAG AA for small text. It's kept because it's the reference color. Darken `--color-text` in `tokens.css` if you need AA.
+- Skip link, one `h1` per page, and headings in order.
+- Text colors meet WCAG AA on their backgrounds.
+- The mobile menu is `inert` while closed. When open it traps focus, closes on Escape and returns focus to the menu button.
+- The FAQ uses native `<details>`/`<summary>`.
+- Scroll reveal only hides content while JS is running, and reduced motion turns off all animation.
