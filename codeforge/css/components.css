@@ -276,7 +276,7 @@ body.is-locked { overflow: hidden; }
 .banner__title { max-width: 14ch; margin: 0; padding: var(--space-7) clamp(24px, 5vw, 72px); font-size: var(--fs-banner); line-height: var(--lh-hero); color: var(--color-on-dark); }
 
 /* ---------- FAQ accordion (native details/summary) ---------- */
-.faq { display: grid; gap: var(--space-3); max-width: 860px; margin-inline: auto; }
+.faq { display: grid; gap: var(--space-3); max-width: var(--faq-max); margin-inline: auto; }
 .faq details { border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
 .faq details[open] { box-shadow: var(--shadow-sm); }
 .faq summary {

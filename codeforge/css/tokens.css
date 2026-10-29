@@ -85,6 +85,7 @@
   /* ---------- Layout ---------- */
   --container-max:     1200px;
   --container-gutter:  clamp(16px, 3vw, 32px);
+  --faq-max:           none; /* FAQ list width: none = full container, like Outcomes; or e.g. 860px */
   --header-height:     76px;
   --logo-height:       40px;
 
